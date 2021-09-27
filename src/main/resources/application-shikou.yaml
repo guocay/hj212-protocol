@@ -1,0 +1,24 @@
+application:
+  park-code: shikou
+netty:
+  url: 192.168.10.103
+  port: 8001
+spring:
+  datasource:
+    dynamic:
+      primary: master
+      datasource:
+        master:
+          type: com.alibaba.druid.pool.DruidDataSource
+          driver-class-name: org.postgresql.Driver
+          url: jdbc:postgresql://192.168.10.105:5432/environmental?useSSL=false
+          username: postgres
+          password: 1234567890
+        environmental:
+          type: com.alibaba.druid.pool.DruidDataSource
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://192.168.10.105:3306/environmental?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+          username: root
+          password: root
+  devtools:
+    add-properties: false

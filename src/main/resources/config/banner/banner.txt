@@ -1,0 +1,7 @@
+${AnsiColor.BRIGHT_RED}
+${AnsiColor.YELLOW} Application Name:                   ${AnsiColor.BRIGHT_BLACK} ${application.title}
+${AnsiColor.YELLOW} Application Version:                ${AnsiColor.BRIGHT_BLACK} ${application.version}
+${AnsiColor.YELLOW} SpringBoot Version:                 ${AnsiColor.BRIGHT_BLACK} ${spring-boot.version}
+${AnsiColor.YELLOW} Listener Port:                      ${AnsiColor.BRIGHT_BLACK} ${netty.port}
+${AnsiColor.YELLOW} Active Profile:                     ${AnsiColor.BRIGHT_BLACK} ${spring.profiles.active}
+${AnsiColor.BRIGHT_BLACK}

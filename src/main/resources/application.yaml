@@ -1,0 +1,27 @@
+application:
+  title: 数据接收服务
+  version: 1.0.0.RELEASE
+netty:
+  url: 192.168.10.103
+  port: 8001
+spring:
+  profiles:
+    active: shikou
+  application:
+    name: moniter-center
+  banner:
+    location: classpath:config/banner/banner.txt
+  cache:
+    type: ehcache
+    ehcache:
+      config: classpath:config/cache/ehcache.xml
+mybatis-plus:
+  configuration:
+    local-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/**.xml
+  global-config:
+    db-config:
+      id-type: id_worker_str
+    banner: false
+logging:
+  config: classpath:config/log/logback-spring.xml
