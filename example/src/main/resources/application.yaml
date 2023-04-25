@@ -1,0 +1,39 @@
+application:
+  title: 数据接收服务
+  version: 1.0.0.RELEASE
+netty:
+  url: 192.168.10.103
+  port: 8001
+spring:
+  application:
+    name: monitor-center
+  datasource:
+    dynamic:
+      primary: master
+      datasource:
+        master:
+          type: com.alibaba.druid.pool.DruidDataSource
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://192.168.15.149:3306/master?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+          username: root
+          password: root
+        environmental:
+          type: com.alibaba.druid.pool.DruidDataSource
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://192.168.15.149:3306/environmental?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+          username: root
+          password: root
+  cache:
+    type: ehcache
+    ehcache:
+      config: classpath:config/cache/ehcache.xml
+mybatis-plus:
+  configuration:
+    local-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/**.xml
+  global-config:
+    db-config:
+      id-type: id_worker_str
+    banner: false
+logging:
+  config: classpath:config/log/logback-spring.xml

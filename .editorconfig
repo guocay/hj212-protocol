@@ -1,0 +1,16 @@
+root = true
+
+[*]
+# 字符集
+charset = utf-8
+# 设置缩进格式
+indent_style = tab
+# 设置缩进大小
+indent_size = 4
+# 设置换行
+end_of_line = lf
+# 不保留行末的空格
+trim_trailing_whitespace = true
+
+[*.java]
+insert_final_newline = true
