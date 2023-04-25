@@ -1,8 +1,6 @@
 package com.github.guocay.hj212;
 
-import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure;
-import com.github.guocay.hj212.server.TcpServer;
-import lombok.extern.slf4j.Slf4j;
+import com.github.guocay.hj212.netty.NettyServer;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -10,15 +8,12 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-@Slf4j
-@Configuration
 @EnableCaching
 @EnableScheduling
 @MapperScan("com.github.guocay.hj212.server.portal")
-@SpringBootApplication(exclude = {DruidDataSourceAutoConfigure.class})
+@SpringBootApplication
 public class MonitorCenterApplication implements CommandLineRunner {
 
     @Value("${netty.port}")
@@ -28,7 +23,7 @@ public class MonitorCenterApplication implements CommandLineRunner {
     private String url;
 
     @Autowired
-    private TcpServer server;
+    private NettyServer server;
 
     public static void main(String[] args) {
         SpringApplication.run(MonitorCenterApplication.class, args);

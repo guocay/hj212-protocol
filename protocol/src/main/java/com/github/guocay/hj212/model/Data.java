@@ -86,76 +86,84 @@ public class Data {
     @JsonProperty("CP")
     private CpData cp;
 
-    public String getQn() {
-        return qn;
-    }
+	public String getQn() {
+		return qn;
+	}
 
-    public void setQn(String qn) {
-        this.qn = qn;
-    }
+	public Data setQn(String qn) {
+		this.qn = qn;
+		return this;
+	}
 
-    public Integer getpNum() {
-        return pNum;
-    }
+	public Integer getpNum() {
+		return pNum;
+	}
 
-    public void setpNum(Integer pNum) {
-        this.pNum = pNum;
-    }
+	public Data setpNum(Integer pNum) {
+		this.pNum = pNum;
+		return this;
+	}
 
-    public Integer getpNo() {
-        return pNo;
-    }
+	public Integer getpNo() {
+		return pNo;
+	}
 
-    public void setpNo(Integer pNo) {
-        this.pNo = pNo;
-    }
+	public Data setpNo(Integer pNo) {
+		this.pNo = pNo;
+		return this;
+	}
 
-    public String getSt() {
-        return st;
-    }
+	public String getSt() {
+		return st;
+	}
 
-    public void setSt(String st) {
-        this.st = st;
-    }
+	public Data setSt(String st) {
+		this.st = st;
+		return this;
+	}
 
-    public String getCn() {
-        return cn;
-    }
+	public String getCn() {
+		return cn;
+	}
 
-    public void setCn(String cn) {
-        this.cn = cn;
-    }
+	public Data setCn(String cn) {
+		this.cn = cn;
+		return this;
+	}
 
-    public String getPw() {
-        return pw;
-    }
+	public String getPw() {
+		return pw;
+	}
 
-    public void setPw(String pw) {
-        this.pw = pw;
-    }
+	public Data setPw(String pw) {
+		this.pw = pw;
+		return this;
+	}
 
-    public String getMn() {
-        return mn;
-    }
+	public String getMn() {
+		return mn;
+	}
 
-    public void setMn(String mn) {
-        this.mn = mn;
-    }
+	public Data setMn(String mn) {
+		this.mn = mn;
+		return this;
+	}
 
-    public List<DataFlag> getDataFlag() {
-        return dataFlag;
-    }
+	public List<DataFlag> getDataFlag() {
+		return dataFlag;
+	}
 
-    public void setDataFlag(List<DataFlag> dataFlag) {
-        this.dataFlag = dataFlag;
-    }
+	public Data setDataFlag(List<DataFlag> dataFlag) {
+		this.dataFlag = dataFlag;
+		return this;
+	}
 
-    public CpData getCp() {
-        return cp;
-    }
+	public CpData getCp() {
+		return cp;
+	}
 
-    public void setCp(CpData cp) {
-        this.cp = cp;
-    }
-
+	public Data setCp(CpData cp) {
+		this.cp = cp;
+		return this;
+	}
 }
