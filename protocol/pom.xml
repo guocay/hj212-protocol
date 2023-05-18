@@ -11,6 +11,8 @@
 
     <artifactId>hj212-protocol</artifactId>
 
+	<description>用于支持符合《污染物在线监控（监测）系统数据传输标准》(HJ212协议)物联网设备的数据解析.</description>
+
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
