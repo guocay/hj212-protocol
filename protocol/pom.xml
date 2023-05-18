@@ -66,4 +66,12 @@
             </plugin>
         </plugins>
     </build>
+
+	<distributionManagement>
+		<repository>
+			<id>github</id>
+			<name>GitHub Maven Packages</name>
+			<url>https://maven.pkg.github.com/guocay/hj212-protocol</url>
+		</repository>
+	</distributionManagement>
 </project>
