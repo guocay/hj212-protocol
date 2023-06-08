@@ -2,13 +2,13 @@ package com.github.guocay.hj212.segment.core;
 
 import com.github.guocay.hj212.segment.config.Configurator;
 import com.github.guocay.hj212.segment.config.Configured;
+import com.github.guocay.hj212.stream.PushbackReader;
 import com.github.guocay.hj212.stream.ReaderStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.Closeable;
 import java.io.IOException;
-import java.io.PushbackReader;
 import java.io.Reader;
 import java.nio.CharBuffer;
 import java.util.Optional;
