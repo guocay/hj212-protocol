@@ -103,33 +103,4 @@ public abstract class FieldValidator<A extends Annotation,V,AF extends Annotatio
                 .withResult(result);
     }
 
-    @SuppressWarnings("rawtypes")
-	public static void create_format_exception2(Set<? extends ConstraintViolation> constraintViolationSet) throws ProtocolFormatException {
-        Map<String, List<ConstraintViolation>> typeCVs = constraintViolationSet
-                .stream()
-                .collect(Collectors.groupingBy(
-                        ConstraintViolation::getMessage,
-                        Collectors.toList())
-                );
-
-        Map<String, String> typePropertys = typeCVs.entrySet()
-                .stream()
-                .map(kv -> {
-                    String pps = kv.getValue()
-                            .stream()
-                            .map(cv -> "'" + cv.getPropertyPath() + "'")
-                            .collect(Collectors.joining(","));
-                    return new AbstractMap.SimpleEntry<>(kv.getKey(),pps);
-                })
-                .collect(Collectors.toMap(AbstractMap.SimpleEntry::getKey, AbstractMap.SimpleEntry::getValue));
-
-        String msg = typePropertys.entrySet()
-                .stream()
-                .map(kv -> "\t"
-                        + kv.getKey()
-                        + " -> "
-                        + kv.getValue())
-                .collect(Collectors.joining("\n"));
-        throw new ProtocolFormatException("Validate error\n" + msg);
-    }
 }
